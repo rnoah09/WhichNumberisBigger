@@ -12,6 +12,7 @@ public class BiggerNumberGame {
         this.upperLimit = upperLimit;
         this.lowerLimit = lowerLimit;
         scoreValue = 10;
+        generateRandomNumbers();
     }
 
     public void generateRandomNumbers(){
@@ -32,7 +33,8 @@ public class BiggerNumberGame {
             return "Well Done!";
         }
         else {
-            return "Incorrect."
+            score -= (scoreValue / 2);
+            return "Incorrect.";
         }
     }
 
