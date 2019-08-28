@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
     private void updateGameDisplay()
     {
         textViewScore.setText("Score:" + game.getScore());
+        game.generateRandomNumbers();
         buttonLeft.setText(String.valueOf(game.getNumber1()));
         buttonright.setText(String.valueOf(game.getNumber2()));
-        game.generateRandomNumbers();
     }
 
     private void setListeners() {
@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, game.checkAnswer(game.getNumber2()), Toast.LENGTH_SHORT).show();
                 if (game.getNumber2() > game.getNumber1())
+
                 {
                     constraintLayout.setBackgroundColor(rgb(133,255,133));
                 }
